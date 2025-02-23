@@ -1,0 +1,21 @@
+2025-02-23 21:24:12.800718+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+select e1_0.id,e1_0.department,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 [42104-232]
+2025-02-23 21:25:40.061277+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+SELECT * FROM EMPLOYEE [42104-232]
+2025-02-23 21:27:13.497567+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+select e1_0.id,e1_0.department,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 [42104-232]
+2025-02-23 21:28:51.530665+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+select e1_0.id,e1_0.department,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 [42104-232]
+2025-02-23 21:28:58.773169+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+select e1_0.id,e1_0.department,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 [42104-232]
+2025-02-23 21:30:01.125264+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+select * from EMPLOYEE [42104-232]
+2025-02-23 21:30:29.425824+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEE" not found (this database is empty); SQL statement:
+select * from EMPLOYEE [42104-232]

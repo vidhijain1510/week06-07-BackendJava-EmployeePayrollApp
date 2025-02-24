@@ -1,4 +1,4 @@
-package com.capgemini.employeepayrollapp.exception;
+package com.capgemini.employeepayrollapp.validation;
 
 public class EmployeeNotFoundException extends RuntimeException {
     public EmployeeNotFoundException(String message) {

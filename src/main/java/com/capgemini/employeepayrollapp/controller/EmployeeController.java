@@ -1,6 +1,7 @@
 package com.capgemini.employeepayrollapp.controller;
 
 
+import com.capgemini.employeepayrollapp.dto.EmployeeDTO;
 import com.capgemini.employeepayrollapp.model.Employee;
 import com.capgemini.employeepayrollapp.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,10 @@ class EmployeeController {
     public Employee getEmployeeById(@PathVariable Long id) { return service.getEmployeeById(id); }
 
     @PostMapping
-    public Employee createEmployee(@RequestBody Employee employee) { return service.saveEmployee(employee); }
+    public Employee createEmployee(@RequestBody EmployeeDTO employee) { return service.saveEmployee(employee); }
 
-    @PutMapping("/employees/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
+    @PutMapping("/{id}")
+    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDTO employee) {
         Employee updatedEmployee = service.updateEmployee(id, employee);
         return ResponseEntity.ok(updatedEmployee);
     }

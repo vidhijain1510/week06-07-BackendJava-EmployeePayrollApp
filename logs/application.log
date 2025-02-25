@@ -141,3 +141,10 @@
 2025-02-25 13:01:08 [WARN][restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:241] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-02-25 13:01:08 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:59] - Started EmployeePayrollAppApplication in 6.793 seconds (process running for 7.51)
 2025-02-25 13:01:08 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:13] - Employee Payroll Application has started successfully in environment: DEV
+2025-02-25 13:17:04 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:53] - Starting EmployeePayrollAppApplication using Java 23.0.2 with PID 17472 (C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp\target\classes started by Lenovo in C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp)
+2025-02-25 13:17:04 [DEBUG][restartedMain] [c.c.e.EmployeePayrollAppApplication:54] - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-02-25 13:17:04 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:658] - The following 1 profile is active: "dev"
+2025-02-25 13:17:10 [WARN][restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:241] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25 13:17:10 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:59] - Started EmployeePayrollAppApplication in 7.41 seconds (process running for 8.151)
+2025-02-25 13:17:10 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:13] - Employee Payroll Application has started successfully in environment: DEV
+2025-02-25 13:17:10 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:14] - Employee payroll db_user is payroll_user 

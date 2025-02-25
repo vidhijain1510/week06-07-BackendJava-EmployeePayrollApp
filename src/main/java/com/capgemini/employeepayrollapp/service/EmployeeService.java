@@ -64,7 +64,7 @@ public class EmployeeService {
                 .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with ID: " + id));
     }
 
-    public Employee createEmployee(EmployeeDTO employeeDTO) {
+    public Employee saveEmployee(EmployeeDTO employeeDTO) {
         Employee employee = new Employee();
         employee.setId(idCounter.getAndIncrement()); // Assign unique ID
         employee.setName(employeeDTO.getName());

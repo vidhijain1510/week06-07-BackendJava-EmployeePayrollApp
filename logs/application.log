@@ -122,3 +122,22 @@
 2025-02-25 12:06:04 [DEBUG][http-nio-8080-exec-4] [o.h.SQL:135] - select e1_0.id,e1_0.name,e1_0.salary from employee e1_0
 2025-02-25 12:06:13 [DEBUG][http-nio-8080-exec-5] [o.h.SQL:135] - insert into employee (name,salary,id) values (?,?,default)
 2025-02-25 12:06:18 [DEBUG][http-nio-8080-exec-6] [o.h.SQL:135] - select e1_0.id,e1_0.name,e1_0.salary from employee e1_0
+2025-02-25 12:52:42 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:53] - Starting EmployeePayrollAppApplication using Java 23.0.2 with PID 5048 (C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp\target\classes started by Lenovo in C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp)
+2025-02-25 12:52:42 [DEBUG][restartedMain] [c.c.e.EmployeePayrollAppApplication:54] - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-02-25 12:52:42 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:658] - The following 1 profile is active: "dev"
+2025-02-25 12:52:48 [WARN][restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:241] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25 12:52:49 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:59] - Started EmployeePayrollAppApplication in 7.527 seconds (process running for 9.181)
+2025-02-25 12:52:49 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:13] - Employee Payroll Application has started successfully in environment: DEV
+2025-02-25 12:59:44 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:53] - Starting EmployeePayrollAppApplication using Java 23.0.2 with PID 16464 (C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp\target\classes started by Lenovo in C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp)
+2025-02-25 12:59:44 [DEBUG][restartedMain] [c.c.e.EmployeePayrollAppApplication:54] - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-02-25 12:59:44 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:658] - The following 1 profile is active: "dev"
+2025-02-25 12:59:50 [DEBUG][restartedMain] [o.h.SQL:135] - create table employee (id bigint not null auto_increment, name varchar(255), salary float(53) not null, primary key (id)) engine=InnoDB
+2025-02-25 12:59:51 [WARN][restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:241] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25 12:59:51 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:59] - Started EmployeePayrollAppApplication in 8.005 seconds (process running for 12.46)
+2025-02-25 12:59:51 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:13] - Employee Payroll Application has started successfully in environment: DEV
+2025-02-25 13:01:03 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:53] - Starting EmployeePayrollAppApplication using Java 23.0.2 with PID 15904 (C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp\target\classes started by Lenovo in C:\Users\Lenovo\OneDrive\Desktop\CapgemTrain\week06-07-BackendJava-EmployeePayrollApp\employeepayrollapp)
+2025-02-25 13:01:03 [DEBUG][restartedMain] [c.c.e.EmployeePayrollAppApplication:54] - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-02-25 13:01:03 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:658] - The following 1 profile is active: "dev"
+2025-02-25 13:01:08 [WARN][restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:241] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25 13:01:08 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:59] - Started EmployeePayrollAppApplication in 6.793 seconds (process running for 7.51)
+2025-02-25 13:01:08 [INFO][restartedMain] [c.c.e.EmployeePayrollAppApplication:13] - Employee Payroll Application has started successfully in environment: DEV

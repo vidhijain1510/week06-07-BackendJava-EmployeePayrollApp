@@ -32,3 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 data/employeedb.mv.db
+logs/application.log

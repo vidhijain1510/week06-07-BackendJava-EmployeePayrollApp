@@ -1,6 +1,7 @@
 package com.capgemini.employeepayrollapp;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class EmployeePayrollAppApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeePayrollAppApplication.class, args);
-		log.info("Employee Payroll Application has started successfully.");
+		ApplicationContext context = SpringApplication.run(EmployeePayrollAppApplication.class, args);
+		log.info("Employee Payroll Application has started successfully in environment: {}", context.getEnvironment().getProperty("environment"));
 	}
 }

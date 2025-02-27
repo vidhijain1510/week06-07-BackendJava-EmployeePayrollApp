@@ -12,16 +12,24 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class EmployeeService {
+public class EmployeeService implements IEmployeePayrollService{
     @Autowired
     private EmployeeRepository repository;
 
     public List<Employee> getAllEmployees() { return repository.findAll(); }
-    public Employee getEmployeeById(Long id) {
+    public Employee getEmployeeById(long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with ID: " + id));
     }
 
+    @Override
+    public List<Employee>getEmployeesByDepartment(String department){
+        List<Employee> employees = repository.findEmployeesByDepartment(department);
+        if (employees.isEmpty()) {
+            throw new EmployeeNotFoundException("No employees found in " + department + " department.");
+        }
+        return employees;
+    }
     public Employee saveEmployee(EmployeeDTO employeeDTO) {
         /*Employee employee = new Employee();
         employee.setName(employeeDTO.getName());
@@ -37,14 +45,14 @@ public class EmployeeService {
         log.debug("Employee Data: " + employee.toString());
         return repository.save(employee);
     }
-    public void deleteEmployee(Long id) {
+    public void deleteEmployee(long id) {
         if (!repository.existsById(id)) {
             throw new EmployeeNotFoundException("Employee not found with ID: " + id);
         }
         repository.deleteById(id); }
 
 
-    public Employee updateEmployee(Long id, EmployeeDTO updatedEmployee) {
+    public Employee updateEmployee(long id, EmployeeDTO updatedEmployee) {
         Employee existingEmployee = repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Employee with ID " + id + " not found"));
 

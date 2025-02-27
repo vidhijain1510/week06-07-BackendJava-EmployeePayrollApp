@@ -2,6 +2,7 @@ package com.capgemini.employeepayrollapp.controller;
 
 
 import com.capgemini.employeepayrollapp.dto.EmployeeDTO;
+import com.capgemini.employeepayrollapp.dto.ErrorResponseDTO;
 import com.capgemini.employeepayrollapp.model.Employee;
 import com.capgemini.employeepayrollapp.service.EmployeeService;
 import jakarta.validation.Valid;
@@ -22,6 +23,12 @@ class EmployeeController {
 
     @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable Long id) { return service.getEmployeeById(id); }
+
+    @GetMapping("/department/{department}")
+    public ResponseEntity<List<Employee>> getEmployeesByDepartment(@PathVariable String department) {
+        List<Employee> employees = service.getEmployeesByDepartment(department);
+        return ResponseEntity.ok(employees);
+    }
 
     @PostMapping()
     public ResponseEntity<Employee> createEmployee(@Valid @RequestBody EmployeeDTO employeeDTO) {

@@ -8,9 +8,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 @Slf4j
@@ -25,7 +23,7 @@ public class EmployeeService {
     }
 
     public Employee saveEmployee(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee();
+        /*Employee employee = new Employee();
         employee.setName(employeeDTO.getName());
         employee.setSalary(employeeDTO.getSalary());
         employee.setGender(employeeDTO.getGender());
@@ -33,6 +31,10 @@ public class EmployeeService {
         employee.setNote(employeeDTO.getNote());
         employee.setProfilePic(employeeDTO.getProfilePic());
         employee.setDepartment(employeeDTO.getDepartment());
+        return repository.save(employee);*/
+        Employee employee = null;
+        employee = new Employee(employeeDTO);
+        log.debug("Employee Data: " + employee.toString());
         return repository.save(employee);
     }
     public void deleteEmployee(Long id) {

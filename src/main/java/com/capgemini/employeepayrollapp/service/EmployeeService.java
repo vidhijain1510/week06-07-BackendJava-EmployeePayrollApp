@@ -5,6 +5,7 @@ import com.capgemini.employeepayrollapp.model.Employee;
 import com.capgemini.employeepayrollapp.repository.EmployeeRepository;
 import com.capgemini.employeepayrollapp.validation.EmployeeNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Service
+@Slf4j
 public class EmployeeService {
     @Autowired
     private EmployeeRepository repository;

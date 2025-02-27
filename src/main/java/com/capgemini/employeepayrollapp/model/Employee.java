@@ -1,26 +1,32 @@
 package com.capgemini.employeepayrollapp.model;
 
 import com.capgemini.employeepayrollapp.dto.EmployeeDTO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Table(name = "employee_payroll")
 public @Data class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "employee_id")
     private Long id;
+
+    @Column(name = "name")
     private String name;
     private double salary;
     private String gender;
     private String note;
     private String profilePic;
     private LocalDate startDate;
+
+    @ElementCollection
+    @CollectionTable(name = "employee_department", joinColumns = @JoinColumn(name = "id"))
+    @Column(name = "department")
     private List<String> department;
 
     public Employee() {}

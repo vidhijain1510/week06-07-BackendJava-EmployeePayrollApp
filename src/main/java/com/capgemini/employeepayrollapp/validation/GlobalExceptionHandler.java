@@ -1,7 +1,14 @@
 package com.capgemini.employeepayrollapp.validation;
 
+import com.capgemini.employeepayrollapp.dto.EmployeeDTO;
+import com.capgemini.employeepayrollapp.dto.ErrorResponseDTO;
+import com.capgemini.employeepayrollapp.model.Employee;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.time.LocalDateTime;
@@ -32,8 +39,26 @@ public class GlobalExceptionHandler {
     }
 }*/
 
-@RestControllerAdvice
+@ControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler {
+    private static final String message = "Exception while processing REST Request";
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponseDTO> handleValidationExceptions(MethodArgumentNotValidException ex) {
+        Map<String, String> errors = new HashMap<>();
+        ex.getBindingResult().getFieldErrors().forEach(error ->
+                errors.put(error.getField(), error.getDefaultMessage())
+        );
+
+        ErrorResponseDTO response = new ErrorResponseDTO(
+                LocalDateTime.now(),
+                "Validation failed for request",
+                errors
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
 
     @ExceptionHandler(EmployeeNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleEmployeeNotFoundException(EmployeeNotFoundException ex) {
